@@ -1,0 +1,122 @@
+/*paleta de colores*/
+:root {
+  --chocolate: #5a4d3a;
+  --espresso: #a58e77;
+  --dulceDeLeche: #744924;
+  --calabaza: #c28d4b;
+  --mantequilla: #dfbe95;
+  --latte: #ddcdbf;
+}
+
+body {
+  margin: 0;
+  background-color: var(--mantequilla);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 10px 100px;
+  background-color: var(--chocolate);
+}
+
+/*_____________________________________________*/
+
+.searchBox {
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  height: 40px;
+  width: 400px;
+  background-color: white;
+  border-radius: 2%;
+  font-size: 20px;
+}
+
+.searchBox input {
+  outline: none;
+  margin: 8px;
+  border: 0;
+  font-size: 16px;
+}
+
+.searchBox button {
+  width: 45px;
+  height: 42px;
+  border: 0;
+  justify-self: end;
+}
+
+.searchBox button img {
+  width: auto;
+  height: 35px;
+  padding: 3px;
+}
+
+/*_____________________________________________*/
+
+.header .userProfile {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  /*background-color: dimgrey;*/
+  margin-left: auto;
+  align-items: center;
+  color: white;
+}
+
+.userProfile div {
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.userProfile img {
+  max-width: 100%;
+}
+
+.userProfile p {
+  margin: 8px;
+}
+
+/*_____________________________________________*/
+
+.mainContainer {
+  display: inline-flex;
+  width: 80vw;
+  margin: 0% 10%;
+}
+
+.mainContainer .sidebar {
+  width: 20%;
+  background-color: var(--espresso);
+}
+
+/*_____________________________________________*/
+
+.mainContainer .gridContainer {
+  width: 80vw;
+  background-color: var(--latte);
+  display: grid;
+  padding: 2%;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 3fr));
+  grid-gap: 15px;
+}
+
+.product {
+  max-width: 300px;
+  max-height: 500px;
+  background-color: white;
+  border-radius: 2%;
+
+  overflow: hidden;
+}
+
+.product img {
+  height: 70%;
+  width: auto;
+}
