@@ -4,15 +4,24 @@
   --espresso: #a58e77;
   --dulceDeLeche: #744924;
   --calabaza: #c28d4b;
-  --mantequilla: #dfbe95;
+  --mantequilla: hsl(33, 54%, 73%);
   --latte: #ddcdbf;
+
+  --color1: #fcedd6;
+  --color2: #a8a67d;
+  --color3: #ffd56d;
+  --color4: #dfa45e;
+  --color5: #5f322d;
 }
 
 body {
   margin: 0;
-  background-color: var(--mantequilla);
+  background-color: var(--latte);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* box-sizing: border-box; */
 }
+
+/*_____________________________________________*/
 
 .header {
   display: flex;
@@ -107,7 +116,7 @@ body {
 
 .gridContainer {
   width: 80vw;
-  background-color: var(--latte);
+  background-color: white;
   display: grid;
   padding: 2%;
   grid-template-columns: repeat(auto-fill, minmax(370px, 3fr));
@@ -124,26 +133,34 @@ body {
   position: relative;
 }
 
-.recipe:hover {
-  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.479);
-  transform: scale(105%);
-  transition: 0.3s;
-  z-index: 10;
-}
-
 .recipe img {
   height: auto;
   width: auto;
+}
+
+.recipe h3 {
+  position: absolute;
+  font-size: 2em;
+  bottom: 2%;
+  left: 5%;
+  color: white;
+  padding-bottom: 2%;
+}
+
+.recipe .title {
+  visibility: hidden;
+  width: 100%;
 }
 
 /*_____________________________________________*/
 
 .scoreContainer {
   position: absolute;
-  top: 1em;
+  bottom: 1em;
   left: 1em;
   padding: 0.5em 0.5em;
-  background-color: #3232328e;
+  z-index: 10;
+  visibility: hidden;
 }
 
 .scoreContainer div {
@@ -169,24 +186,69 @@ body {
 
 /*_____________________________________________*/
 
-.recipe .title:hover {
-  background-color: #1e1e1e76;
+.recipe:hover {
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.479);
+  transform: scale(105%);
+  transition: 0.3s;
+  z-index: 10;
 }
 
-.recipe h3 {
+.recipe:hover .title {
+  visibility: visible;
+}
+
+.recipe:hover .fade {
+  bottom: 0;
   position: absolute;
-  font-size: 2em;
-  bottom: 2%;
-  left: 5%;
+  background-image: linear-gradient(
+    to top,
+    /* rgba(0, 0, 0, 0.6) 40%, */ rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 40%;
+}
+
+.recipe:hover .scoreContainer {
+  visibility: visible;
+}
+
+/*__________________________________*/
+
+.sidebar {
+  padding: 1rem;
+  font-size: 0.8rem;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #444;
+}
+
+.sidebar dt {
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.sidebar dd {
+  margin-left: 1.2rem;
+}
+
+.sidebar dd:hover a {
   color: white;
 }
 
-.fade {
-  background-image: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(0, 0, 0, 0) 100%
-  );
-  height: 40%w;
-  width: 100%;
+/*___________________________*/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  background-color: #5a4d3a;
+  height: 20vh;
+  width: 100vw;
+  margin-bottom: 15vh;
 }
