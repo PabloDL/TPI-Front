@@ -108,7 +108,7 @@ body {
 
 .mainContainer .sidebar {
   width: 20vw;
-  min-width: 200px;
+  min-width: 150px;
   background-color: var(--espresso);
 }
 
@@ -152,6 +152,15 @@ body {
   width: 100%;
 }
 
+.recipe .preparation {
+  z-index: 10;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  color: white;
+  font-weight: bold;
+}
+
 /*_____________________________________________*/
 
 .scoreContainer {
@@ -192,6 +201,8 @@ body {
   transition: 0.3s;
   z-index: 10;
 }
+
+/*_____________________________________________*/
 
 .recipe:hover .title {
   visibility: visible;
@@ -235,8 +246,18 @@ body {
   margin-left: 1.2rem;
 }
 
-.sidebar dd:hover a {
+.sidebar dd a:hover {
   color: white;
+}
+
+.selected::before {
+  content: "✅";
+  margin-left: -1.1rem;
+}
+
+.excluded::before {
+  content: "❌";
+  margin-left: -1.1rem;
 }
 
 /*___________________________*/
