@@ -19,7 +19,15 @@
                 <img src="../resources/icons/lupa.svg" alt="" >
             </button>
         </div>
-        <div class="profile">
+        <div>
+            <button class="button">Registrar
+                <a href="register.html"></a>                
+            </button>
+            <button class="button">Ingresar
+                <a href="login.html"></a>                
+            </button>
+        </div>
+        <div class="profile" hidden="hidden">
             <div>
                 <img src="../resources/images/profileCat.jpg" alt="">
             </div>
@@ -35,8 +43,8 @@
                     <dd><a href="">Golosinas</a></dd>
                     <dd><a href="">Ensaladas</a></dd>
                     <dd><a href="">Pastas</a></dd>
-                    <dd><a href="">Pasteles</a></dd>
-                    <dd><a href="">Postres</a></dd>
+                    <dd class="excluded"><a href="">Pasteles</a></dd>
+                    <dd class="selected"><a href="">Postres</a></dd>
                     <dd><a href="">Sopas</a></dd>
             </dl>
             <dl>
@@ -48,17 +56,17 @@
             </dl>
             <dl>
                 <dt>Dieta</dt>
-                    <dd><a href="">Vegetariana</a></dd>
+                    <dd class="selected"><a href="">Vegetariana</a></dd>
                     <dd><a href="">Vegana</a></dd>
                     <dd><a href="">Keto</a></dd>
-                    <dd><a href="">Celiaca</a></dd>
+                    <dd class="selected"><a href="">Celiaca</a></dd>
                     <dd><a href="">Personalizada</a></dd>
             </dl>
         </aside>
         
         <section class="gridContainer">
             <article class="recipe">
-                
+                <a href="receta.html"></a>
                 <img src="../resources/images/receta1.jpg" alt="">
                 <div class="preparacion">30 min</div>
                 <div class="title fade">
@@ -70,7 +78,8 @@
                     </div>
                 </div>
             </article>
-            <article class="recipe">        
+            <article class="recipe">   
+                <a href="receta.html"></a>     
                 <img src="../resources/images/receta2.jpg" alt="">
                 <div class="preparacion">40 min</div>
                 <div class="title fade">
@@ -83,6 +92,7 @@
                 </div>       
             </article>
             <article class="recipe">
+                <a href="receta.html"></a>
                 <img src="../resources/images/receta3.jpg" alt="">
                 <div class="preparacion">40 min</div>
                 <div class="title fade">
@@ -95,6 +105,59 @@
                 </div> 
             </article>
             <article class="recipe">
+                <a href="receta.html"></a>
+                <img src="../resources/images/receta4.jpg" alt="">
+                <div class="preparacion">30 min</div>
+                <div class="title fade">
+                    <h3>Fideos con tuco</h4>
+                </div>
+                <div class="scoreContainer">
+                    <div class="stars">
+                        <div class="score" style="width: 60.5%;"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="recipe">
+                <a href="receta.html"></a>
+                <img src="../resources/images/receta4.jpg" alt="">
+                <div class="preparacion">30 min</div>
+                <div class="title fade">
+                    <h3>Fideos con tuco</h4>
+                </div>
+                <div class="scoreContainer">
+                    <div class="stars">
+                        <div class="score" style="width: 60.5%;"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="recipe">
+                <a href="receta.html"></a>
+                <img src="../resources/images/receta4.jpg" alt="">
+                <div class="preparacion">30 min</div>
+                <div class="title fade">
+                    <h3>Fideos con tuco</h4>
+                </div>
+                <div class="scoreContainer">
+                    <div class="stars">
+                        <div class="score" style="width: 60.5%;"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="recipe">
+                <a href="receta.html"></a>
+                <img src="../resources/images/receta4.jpg" alt="">
+                <div class="preparacion">30 min</div>
+                <div class="title fade">
+                    <h3>Fideos con tuco</h4>
+                </div>
+                <div class="scoreContainer">
+                    <div class="stars">
+                        <div class="score" style="width: 60.5%;"></div>
+                    </div>
+                </div>
+            </article>
+            <article class="recipe">
+                <a href="receta.html"></a>
                 <img src="../resources/images/receta4.jpg" alt="">
                 <div class="preparacion">30 min</div>
                 <div class="title fade">
@@ -109,19 +172,33 @@
         </section>
      </main>
     <footer>
-        <p>contacto: Contacto@CocinAr.com.ar</p>
-        <div>
-            <p> nuestras redes</p>
-            <div class="logo"><a href="http://wwww.instagram.com/">📷</a></div>
-            <div class="logo"><a href="http://www.x.com">✖️</a></div>
-            <div class="logo"><a href=""></a></div>
-            <div class="logo"><a href=""></a></div>    
-        </div>
+            <div>
+                <a class="relatedLinks" href="#">Terminos y Condiciones</a>
+                <a class="relatedLinks" href="#">Politica de privacidad</a>
+                <a class="relatedLinks" href="#">Politica de cookies</a>
+            </div>
+
+            <div>
+                <a class="relatedLinks" href="#">Sobre nosotros</a>
+                <a class="relatedLinks" href="#">Suscribite a nuestro newsletter</a>
+            </div>
+
+            <div>
+                <p>Contactanos!</p>
+                <p>Contacto@CocinAr.com.ar</p>
+                <a href="http://wwww.instagram.com/"><img src="./resources/icons/instagram-24.png" alt=""></a>
+                <a href="http://www.facebook.com"><img src="./resources/icons/facebook-24.png" alt=""></a>
+                <a href="http://www.youtube.com"><img src="./resources/icons/youtube-24.png" alt=""></a>
+                <a href="http://www.linkedIn.com"><img src="./resources/icons/linkedin-24.png" alt=""></a>
+            </div>
+            
+        
         
     </footer>
 
 </body>
 <script>
+
 
 </script>
 </html>

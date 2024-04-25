@@ -72,6 +72,30 @@ body {
 
 /*_____________________________________________*/
 
+.header .button {
+  height: 35px;
+  width: 100px;
+  color: white;
+  background-color: #8f8f8f;
+  border-radius: 5%;
+  border: 0px;
+  position: relative;
+}
+
+.header .button:hover {
+  background-color: #8f8f8f71;
+}
+
+.header .button a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+/*_____________________________________________*/
+
 .header .userProfile {
   display: flex;
   width: 200px;
@@ -159,6 +183,15 @@ body {
   right: 1em;
   color: white;
   font-weight: bold;
+}
+
+.recipe a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 30;
 }
 
 /*_____________________________________________*/
@@ -264,12 +297,20 @@ body {
 
 footer {
   display: flex;
-  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-
-  background-color: #5a4d3a;
+  background-color: #817055;
   height: 20vh;
   width: 100vw;
   margin-bottom: 15vh;
+}
+
+footer a,
+footer a:visited {
+  color: black;
+}
+
+footer .relatedLinks {
+  display: block;
+  margin: 8px;
 }
