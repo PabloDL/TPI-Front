@@ -1,1 +1,1 @@
-Maqueta de poagina web
+Maqueta de pagina web
