@@ -1,0 +1,26 @@
+.recipeContainer {
+  width: 80vw;
+  margin: 0% 10% 10% 10%;
+  justify-content: center;
+  background-color: white;
+}
+
+.mainPicture {
+  height: auto;
+  overflow: hidden;
+  margin-top: 4%;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.recipeContainer section {
+  margin-left: 15vh;
+  margin-right: 15vh;
+}
+
+.recipeContainer dt {
+  font-weight: 800;
+}
