@@ -19,6 +19,8 @@ body {
   background-color: var(--latte);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   /* box-sizing: border-box; */
+  /* scroll-behavior: smooth;
+  transition: ease; */
 }
 
 /*_____________________________________________*/
@@ -80,6 +82,7 @@ body {
   border-radius: 5%;
   border: 0px;
   position: relative;
+  cursor: pointer;
 }
 
 .header .button:hover {
@@ -274,10 +277,15 @@ body {
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 7px;
+  cursor: pointer;
 }
 
 .sidebar dd {
   margin-left: 1.2rem;
+}
+
+.sidebar dd a:before {
+  background-image: url("/resources/icons/choices_GREY.png");
 }
 
 .sidebar dd a:hover {
@@ -289,9 +297,21 @@ body {
   margin-left: -1.1rem;
 }
 
+.selected a {
+  color: white;
+}
+
 .excluded::before {
   content: "❌";
   margin-left: -1.1rem;
+}
+
+.excluded a {
+  color: white;
+}
+
+.sidebar dt:hover ~ dd a {
+  color: white;
 }
 
 /*___________________________*/
@@ -314,4 +334,33 @@ footer a:visited {
 footer .relatedLinks {
   display: block;
   margin: 8px;
+}
+
+div.modal {
+  background-color: #000000;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  z-index: 50;
+}
+
+dialog.modal {
+  background-color: white;
+  border-radius: 3%;
+  position: fixed;
+  z-index: 60;
+  border: none;
+  width: 35%;
+  text-align: center;
+  min-width: 300px;
+}
+
+dialog.modal form div {
+  margin: 2%;
+  width: auto;
+}
+
+dialog.modal::backdrop {
+  background-color: #0000005e;
+  backdrop-filter: blur(0.3rem);
 }

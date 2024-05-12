@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CocinAr</title>
 
     <link rel="stylesheet" href="./resources/css/style.css">
 </head>
@@ -22,12 +22,8 @@
             </button>
         </div>
         <div>
-            <button class="button">Registrar
-                <a href="register.html"></a>                
-            </button>
-            <button class="button">Ingresar
-                <a href="login.html"></a>                
-            </button>
+            <button id="openRegister" class="button">Registrar</button>
+            <button id="openLogin" class="button">Ingresar</button>
         </div>
         <div class="profile" hidden="hidden">
             <div>
@@ -193,14 +189,80 @@
                 <a href="http://www.youtube.com"><img src="./resources/icons/youtube-24.png" alt=""></a>
                 <a href="http://www.linkedIn.com"><img src="./resources/icons/linkedin-24.png" alt=""></a>
             </div>
-            
-        
-        
+         
     </footer>
 
+    <dialog class="modal" id="registerForm">
+        <form action="#" method="post">
+            <h2 class="tituloRegistrarse">Registro</h2>
+            <div>
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input type="email" placeholder="Email" id="email" name="email">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input type="password" placeholder="Contraseña" id="password" name="password">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" id="fechaNacimiento" name="fechaNacimiento">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <select name="pais" id="pais">
+                    <option value="">País</option>
+                    <option value="AR">Argentina</option>
+                    <option value="BO">Bolivia</option>
+                    <option value="BR">Brasil</option>
+                    <option value="CH">Chile</option>
+                    <option value="CO">Colombia</option>
+                    <option value="EC">Ecuador</option>
+                    <option value="PY">Paraguay</option>
+                    <option value="PE">Perú</option>
+                    <option value="UY">Uruguay</option>
+                    <option value="VE">Venezuela</option>
+                </select>
+                <div class="error-text"></div>
+            </div>
+            <div class="terminos">
+                <input class="check" type="checkbox" id="terminos">
+                <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input class="boton" type="submit" value="Registrarse">
+            </div>
+            <div>
+                <a class="ayuda" href="#">Necesitas ayuda?</a>
+            </div>
+        </form>
+    </dialog>
+    <dialog class="modal" id="loginForm">
+        <form action="#" method="post">
+            <h2 class="tituloRegistrarse">Ingreso</h2>
+            <div>
+                <input type="email" placeholder="Email" id="email" name="email">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input type="password" placeholder="Contraseña" id="password" name="password">
+                <div class="error-text"></div>
+            </div>
+            <div>
+                <input class="boton" type="submit" value="Ingresar">
+            </div>
+            <div>
+                <a class="ayuda" onclick="openRegister()" href="#">No estas registrado? registrate</a>
+            </div>
+        </form>
+    </dialog>
 </body>
-<script>
-
-
-</script>
+<script src="./resources/js/index.js"></script>
 </html>
