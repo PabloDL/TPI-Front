@@ -290,6 +290,7 @@ body {
 
 .sidebar dd a:hover {
   color: white;
+  cursor: pointer;
 }
 
 .selected::before {

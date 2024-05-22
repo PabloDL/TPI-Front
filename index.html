@@ -37,34 +37,35 @@
         <aside class="sidebar">
             <dl>
                 <dt>Categorias</dt>
-                    <dd><a href="">Carnes</a></dd>
-                    <dd><a href="">Golosinas</a></dd>
-                    <dd><a href="">Ensaladas</a></dd>
-                    <dd><a href="">Pastas</a></dd>
-                    <dd class="excluded"><a href="">Pasteles</a></dd>
-                    <dd class="selected"><a href="">Postres</a></dd>
-                    <dd><a href="">Sopas</a></dd>
+                    <dd><a>Carnes</a></dd>
+                    <dd><a>Golosinas</a></dd>
+                    <dd><a>Ensaladas</a></dd>
+                    <dd><a>Pastas</a></dd>
+                    <dd class="excluded"><a>Pasteles</a></dd>
+                    <dd class="selected"><a>Postres</a></dd>
+                    <dd><a>Sopas</a></dd>
             </dl>
             <dl>
                 <dt>Preparacion</dt>
-                    <dd><a href="">15min</a></dd>
-                    <dd><a href="">30min</a></dd>
-                    <dd><a href="">45min</a></dd>
-                    <dd><a href="">1hr</a></dd>
+                    <dd><a>15min</a></dd>
+                    <dd><a>30min</a></dd>
+                    <dd><a>45min</a></dd>
+                    <dd><a>1hr</a></dd>
             </dl>
             <dl>
                 <dt>Dieta</dt>
-                    <dd class="selected"><a href="">Vegetariana</a></dd>
-                    <dd><a href="">Vegana</a></dd>
-                    <dd><a href="">Keto</a></dd>
-                    <dd class="selected"><a href="">Celiaca</a></dd>
-                    <dd><a href="">Personalizada</a></dd>
+                    <dd class="selected"><a>Vegetariana</a></dd>
+                    <dd><a>Vegana</a></dd>
+                    <dd><a>Keto</a></dd>
+                    <dd class="selected"><a>Celiaca</a></dd>
+                    <dd><a>Personalizada</a></dd>
             </dl>
         </aside>
         
         <section class="gridContainer">
+            <!--
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta1.jpg" alt="">
                 <div class="preparation">30 min</div>
                 <div class="title fade">
@@ -77,7 +78,7 @@
                 </div>
             </article>
             <article class="recipe">   
-                <a href="recipe.html"></a>     
+                <a href="./pages/recipe.html"></a>
                 <img src="../resources/images/receta2.jpg" alt="">
                 <div class="preparation">40 min</div>
                 <div class="title fade">
@@ -90,7 +91,7 @@
                 </div>       
             </article>
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta3.jpg" alt="">
                 <div class="preparation">40 min</div>
                 <div class="title fade">
@@ -103,7 +104,7 @@
                 </div> 
             </article>
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta4.jpg" alt="">
                 <div class="preparation">30 min</div>
                 <div class="title fade">
@@ -116,7 +117,7 @@
                 </div>
             </article>
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta4.jpg" alt="">
                 <div class="preparation">30 min</div>
                 <div class="title fade">
@@ -129,7 +130,7 @@
                 </div>
             </article>
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta4.jpg" alt="">
                 <div class="preparation">30 min</div>
                 <div class="title fade">
@@ -142,7 +143,7 @@
                 </div>
             </article>
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta4.jpg" alt="">
                 <div class="preparation">30 min</div>
                 <div class="title fade">
@@ -155,7 +156,7 @@
                 </div>
             </article>
             <article class="recipe">
-                <a href="recipe.html"></a>
+                <a href="./pages/recipe.html"></a>
                 <img src="./resources/images/receta4.jpg" alt="">
                 <div class="preparation">30 min</div>
                 <div class="title fade">
@@ -167,6 +168,7 @@
                     </div>
                 </div>
             </article>
+            -->
         </section>
      </main>
     <footer>
@@ -196,27 +198,27 @@
         <form action="#" method="post">
             <h2 class="tituloRegistrarse">Registro</h2>
             <div>
-                <input type="text" placeholder="Nombre" id="nombre" name="nombre">
+                <input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
                 <div class="error-text"></div>
             </div>
             <div>
-                <input type="text" placeholder="Apellido" id="apellido" name="apellido">
+                <input type="text" placeholder="Apellido" id="apellido" name="apellido" required>
                 <div class="error-text"></div>
             </div>
             <div>
-                <input type="email" placeholder="Email" id="email" name="email">
+                <input type="email" placeholder="Email" id="email" name="email" required>
                 <div class="error-text"></div>
             </div>
             <div>
-                <input type="password" placeholder="Contraseña" id="password" name="password">
+                <input type="password" placeholder="Contraseña" id="password" name="password" required>
                 <div class="error-text"></div>
             </div>
             <div>
-                <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" id="fechaNacimiento" name="fechaNacimiento">
+                <input type="date" placeholder="Fecha de Nacimiento (dd/mm/aaaa)" id="fechaNacimiento" name="fechaNacimiento"  required>
                 <div class="error-text"></div>
             </div>
             <div>
-                <select name="pais" id="pais">
+                <select name="pais" id="pais" required>
                     <option value="">País</option>
                     <option value="AR">Argentina</option>
                     <option value="BO">Bolivia</option>
@@ -232,7 +234,7 @@
                 <div class="error-text"></div>
             </div>
             <div class="terminos">
-                <input class="check" type="checkbox" id="terminos">
+                <input class="check" type="checkbox" id="terminos" required>
                 <label class="textoCheck" for="terminos">Acepto términos y condiciones</label>
                 <div class="error-text"></div>
             </div>
@@ -248,12 +250,15 @@
         <form action="#" method="post">
             <h2 class="tituloRegistrarse">Ingreso</h2>
             <div>
-                <input type="email" placeholder="Email" id="email" name="email">
+                <input type="email" placeholder="Email" id="email" name="email" required>
                 <div class="error-text"></div>
             </div>
             <div>
-                <input type="password" placeholder="Contraseña" id="password" name="password">
+                <input type="password" placeholder="Contraseña" id="password" name="password" required>
                 <div class="error-text"></div>
+            </div>
+            <div>
+                <p hidden="hidden">esto es un mensaje de error</p>
             </div>
             <div>
                 <input class="boton" type="submit" value="Ingresar">
