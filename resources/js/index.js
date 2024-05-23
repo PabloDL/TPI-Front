@@ -65,8 +65,8 @@ function resetFilters(category){
 window.addEventListener("load", () => loadRecipes());
 
 async function loadRecipes(){
-  const recipes = await fetch("www.themealdb.com/api/json/v1/1/filter.php?i=chicken");
-  //const recipes = await fetch("/resources/json/DemoRecipes.json");
+  //const recipes = await fetch("www.themealdb.com/api/json/v1/1/filter.php?i=chicken");
+  const recipes = await fetch("./resources/json/DemoRecipes.json");
   let recetas = await recipes.json();
   printRecipes(recetas.meals);
 
