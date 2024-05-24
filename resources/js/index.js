@@ -62,19 +62,22 @@ function resetFilters(category){
 
 //---------------------------------------------------------------------
 
-window.addEventListener("load", () => loadRecipes());
+window.addEventListener("load", () => {
+  loadCategories();
+  loadRecipes();
+});
+
 
 async function loadRecipes(){
   //const recipes = await fetch("www.themealdb.com/api/json/v1/1/filter.php?i=chicken");
-  const recipes = await fetch("./resources/json/DemoRecipes.json");
-  let recetas = await recipes.json();
+  const recetas = await (await fetch("./resources/json/DemoRecipes.json")).json();
   printRecipes(recetas.meals);
-
 }
 
 function printRecipes(recipes){
+  let articles = "";
   recipes.forEach((recipe)=> {
-  let article = 
+  articles += 
     `<article class="recipe">
         <a href="./pages/recipe.html?id${recipe.idMeal}"></a>
         <img src="${recipe.strMealThumb}" alt="">
@@ -88,12 +91,23 @@ function printRecipes(recipes){
             </div>
         </div>
     </article>`
-
-    document.querySelector(".gridContainer").innerHTML += article;
   });
-
+  document.querySelector(".gridContainer").innerHTML += articles;
 }
 
+async function loadCategories(){
+  const categories = await(await fetch("./resources/json/Categories.json")).json();
+  printCategories(categories.categories);
+}
+
+function printCategories(categories){
+  let listItems = "";
+  categories.forEach((category) => {
+    listItems += 
+    `<dd><a>${category.strCategory}</a></dd>`;
+  });
+  document.querySelector(".sidebar > dl:nth-child(1)").innerHTML += listItems;
+}
 
 //---------------------------------------------------------------------
 
