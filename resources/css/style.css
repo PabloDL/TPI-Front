@@ -361,3 +361,8 @@ dialog.modal::backdrop {
   background-color: #0000005e;
   backdrop-filter: blur(0.3rem);
 }
+
+.fakeLink {
+  cursor: pointer;
+  color: blue;
+}

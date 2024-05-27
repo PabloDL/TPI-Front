@@ -2,14 +2,18 @@ const registerForm = document.getElementById("registerForm");
 const loginForm = document.getElementById("loginForm");
 const dialogReg = document.querySelectorAll("dialog")[0];
 const dialogLog = document.querySelectorAll("dialog")[1];
-const openLogin = document.querySelector("#openLogin");
-const openRegister = document.querySelector("#openRegister");
+const openLogin = document.querySelector(".openLogin");
+const openRegister = document.querySelector(".openRegister");
 
 openLogin.addEventListener("click", function() {
+  dialogLog.close();
+  dialogReg.close();
   dialogLog.showModal();
 });
 
 openRegister.addEventListener("click", function() {
+  dialogLog.close();
+  dialogReg.close();
   dialogReg.showModal();
 });
 
@@ -64,11 +68,11 @@ function resetFilters(category){
 
 window.addEventListener("load", () => {
   loadCategories();
-  loadRecipes();
+  loadDefaultRecipes();
 });
 
 
-async function loadRecipes(){
+async function loadDefaultRecipes(){
   //const recipes = await fetch("www.themealdb.com/api/json/v1/1/filter.php?i=chicken");
   const recetas = await (await fetch("./resources/json/DemoRecipes.json")).json();
   printRecipes(recetas.meals);
